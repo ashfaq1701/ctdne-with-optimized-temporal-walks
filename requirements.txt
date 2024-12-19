@@ -1,0 +1,6 @@
+networkx
+gensim
+numpy
+tqdm
+joblib
+setuptools

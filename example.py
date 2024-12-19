@@ -1,13 +1,13 @@
 import numpy as np
 import networkx as nx
-from ctdne import CTDNE
+from CTDNE import CTDNE
 
 # FILES
 EMBEDDING_FILENAME = './embeddings.emb'
 EMBEDDING_MODEL_FILENAME = './embeddings.model'
 
 # Create a graph
-graph = nx.fast_gnp_random_graph(n=100, p=0.5)
+graph = nx.fast_gnp_random_graph(n=50000, p=0.5)
 m = len(graph.edges())
 edge2time = {edge: time for edge,time in zip(graph.edges(),(m*np.random.rand(m)).astype(int))}
 nx.set_edge_attributes(graph,edge2time,'time')
